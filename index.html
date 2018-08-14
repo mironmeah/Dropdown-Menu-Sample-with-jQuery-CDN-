@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery Dropdown Menu</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="menu">
+            <ul>
+                <li><a href="">Home <i class="fa fa-home" arria-hidden="true"></i></a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Audio</a></li>
+                <li><a href="#">Video <i class="fa fa-sort-down" arria-hidden="true"></i></a>
+                    <ul>
+                        <li><a href="">Natok</a></li>
+                        <li><a href="">Movie</a></li>
+                        <li><a href="">Song</a></li>
+                        <li><a href="">Golden Sont</a></li>
+                    </ul>                
+                </li>
+                <li><a href="">Servicess</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.menu ul li').hover(function(){
+                    $(this).find('ul').slideToggle(400);
+                });
+            })
+        </script>        
+    </body>
+</html>
